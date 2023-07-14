@@ -1,0 +1,160 @@
+{
+  "main_h1": {
+    "message": "Twoje zbiory:"
+  },
+  "search_placeholder": {
+    "message": "Wyszukaj..."
+  },
+  "new_btn_title": {
+    "message": "Utwórz nowy zbiór."
+  },
+  "settings_btn_title": {
+    "message": "Otwórz ustawienia."
+  },
+
+  "edit_h1": {
+    "message": "Edytuj zbiór:"
+  },
+  "set_name_placeholder": {
+    "message": "Nazwa twojego zbioru"
+  },
+  "hashtags_placeholder": {
+    "message": "Twoje tagi"
+  },
+  "save_btn_title": {
+    "message": "Zapisz zmiany."
+  },
+  "close_edit_btn_title": {
+    "message": "Wyjdź bez zapisywania zmian."
+  },
+  "favorite_btn_title": {
+    "message": "Dodaj ten zbiór do ulubionych aby pokazywał się na górze listy."
+  },
+
+  "settings_h1": {
+    "message": "Ustawienia:"
+  },
+  "typ_sup_label": {
+    "message": "wspomaganie pisania"
+  },
+  "typ_sup_toggle_title": {
+    "message": "Włącz lub wyłącz automatyczne dostawianie przecinków i hashtagów kiedy edytujesz zbiory."
+  },
+  "save_close_label": {
+    "message": "zapisz zamyka okno edycji"
+  },
+  "save_close_toggle_title": {
+    "message": "Włącz lub wyłącz zamykanie okna edycji kiedy zapisujesz."
+  },
+  "clear_btn_title": {
+    "message": "DEBUG, zeruje lokalne dane"
+  },
+  "clear_btn_inner": {
+    "message": "wyczyść dane"
+  },
+  "export_btn_title": {
+    "message": "Zapisz wszystkie zbiory do pliku json."
+  },
+  "export_btn_inner": {
+    "message": "eksportuj"
+  },
+  "reset_settings_btn_title": {
+    "message": "Zresetuj ustawienia i skróty do domyślnych wartości."
+  },
+  "reset_settings_btn_inner": {
+    "message": "zresetuj ustawienia"
+  },
+  "delete_sets_btn_title": {
+    "message": "Usuń wszytkie zbiory."
+  },
+  "delete_sets_btn_inner": {
+    "message": "usuń wszytkie zbiory"
+  },
+  "keybinds_btn_title": {
+    "message": "Edytuj kombinacje klawiszy które aktywują skróty."
+  },
+  "keybinds_btn_inner": {
+    "message": "edytuj skróty klawiaturowe"
+  },
+  "close_settings_btn_title": {
+    "message": "Wyjdź, zmiany zostały zapisane automatycznie."
+  },
+
+  "keybinds_h1": {
+    "message": "Skróty klawiaturowe"
+  },
+  "save_keybind_title": {
+    "message": "Wybierz które klawisze zapisują podczas edytowania. (Domyślnie: Enter)"
+  },
+  "save_keybind_label": {
+    "message": "zapisz:"
+  },
+  "back_keybind_title": {
+    "message": "Wybierz które klawisze wracają do poprzedniego menu. (Domyślnie: Escape)"
+  },
+  "back_keybind_label": {
+    "message": "wyjdź:"
+  },
+  "new_keybind_title": {
+    "message": "Wybierz które klawisze tworzą nowy zbiór. (Domyślnie: Control+n)"
+  },
+  "new_keybind_label": {
+    "message": "nowy zbiór:"
+  },
+  "edit_keybind_title": {
+    "message": "Wybierz które klawisze edytują obecnie wybrany zbiór. (Domyślnie: Control+e)"
+  },
+  "edit_keybind_label": {
+    "message": "edytuj:"
+  },
+  "delete_keybind_title": {
+    "message": "Wybierz które klawisze usuwają obecnie wybrany zbiór. (Domyślnie: Control+d)"
+  },
+  "delete_keybind_label": {
+    "message": "usuń:"
+  },
+  "favorite_keybind_title": {
+    "message": "Wybierz które klawisze dodają obecnie edytowany zbiór. (Domyślnie: Control+f)"
+  },
+  "favorite_keybind_label": {
+    "message": "dodaj do ulubionych:"
+  },
+
+  "no_sets_message": {
+    "message": "Nie masz zapisanych żadnych zbiorów"
+  },
+  "set_edit_title": {
+    "message": "Edytuj $set_name$.",
+    "placeholders": {
+      "set_name": {
+        "content": "$1"
+      }
+    }
+  },
+  "set_delete_title": {
+    "message": "Usuń $set_name$.",
+    "placeholders": {
+      "set_name": {
+        "content": "$1"
+      }
+    }
+  },
+  "copy_alert": {
+    "message": "Skopiowano!"
+  },
+  "save_alert": {
+    "message": "Zapisano!"
+  }
+  ,"delete_alert": {
+    "message": "Usunięto!"
+  },
+  "delete_confirm": {
+    "message": "Czy chcesz usunąć ten zbiór?"
+  },
+  "confirm": {
+    "message": "Tak"
+  },
+  "decline": {
+    "message": "Nie"
+  }
+}

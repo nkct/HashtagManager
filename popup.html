@@ -1,0 +1,415 @@
+<!doctype html>
+<style type="text/css">
+	:root {
+		--main-blue: #6eb7f3;
+		--darker-blue: #5893c4;
+	}
+
+	body {
+		padding: 10px;
+		width: 300px;
+		text-align: center;
+		background-color: var(--main-blue);
+		color: var(--main-blue);
+		text-shadow: 0px 0px 1px black;
+	}
+	input[type=text] {
+		border-radius: 10px;
+		padding: 3px;
+		border: 2px var(--main-blue) solid;
+	}
+	textarea {
+		border-radius: 10px;
+		padding: 3px;
+		border: 2px var(--main-blue) solid;
+	}
+	button {
+		border-radius: 5px;
+		border: 3px rgb(199, 199, 199) solid;
+		background-color: var(--main-blue);
+		margin: 2px;
+	}
+	button:hover {
+		scale: 1.05;
+		filter: brightness(90%);
+	}
+	button:active {
+		scale: 0.9;
+	}
+
+	::-webkit-scrollbar {
+		width: 10px;
+	}
+	
+	::-webkit-scrollbar-track {
+		background: #ffffff;
+	}
+	
+	::-webkit-scrollbar-thumb {
+		background: var(--darker-blue);
+		border-radius: 15px;
+	}
+
+	::-webkit-scrollbar-thumb:hover {
+		filter: brightness(80%);
+	}
+
+	.popup {
+		background-color: white;
+		border-radius: 25px;
+		padding: 7px 0;
+	}
+	.close_btn {
+		position: absolute;
+		left: 5%;
+		top: 20px;
+
+		border-radius: 0px;
+		border: none;
+		background: none;
+		margin: 0;
+	}
+	.close_btn > img {
+		height: 40px;
+	}
+
+	#main_floating_header {
+		position: sticky;
+		top: 0;
+		padding: 15px 0;
+		background-color: white;
+		border-radius: 25px;
+		z-index: 100;
+	}
+	#main_floating_header > h1 {
+		margin-top: 0;
+		margin-bottom: 20px;
+	}
+	#search_bar {
+		display: block;
+		width: 60%;
+		margin: 10px 20%;
+	}
+	#new_btn {
+		position: absolute;
+		left: 5px;
+		top: 15px;
+	}
+	#settings_btn {
+		position: absolute;
+		right: 5px;
+		top: 15px;
+	}
+	#set_list {
+		text-align: left;
+		padding: 0 25px;
+		color: black;
+		text-shadow: none;
+	}
+	.set_list_elem {
+		display: block;
+		border: 3px var(--main-blue) solid;
+		padding: 5px;
+		border-radius: 15px;
+		margin-bottom: 15px;
+	}
+	.set_list_elem:hover {
+		scale: 1.05;
+	}
+	.set_list_elem:active {
+		scale: 1;
+	}
+	.set_list_elem > h2 {
+		border: 1px rgb(199, 199, 199) solid;
+		border-radius: 15px;
+		margin: 5px;
+		padding: 4px;
+	}
+	.set_list_elem > span {
+		border: 1px rgb(199, 199, 199) solid;
+		border-radius: 15px;
+		margin: 5px;
+		padding: 4px;
+		min-height: 40px;
+	}
+	.set_content {
+		display: block;
+	}
+	.list_icon_btn {
+		margin: 2px !important;
+		padding: 0;
+	}
+	.list_icon_btn > img {
+		height: 25px !important;
+	}
+	.icon_btn {
+		border-radius: 0px;
+		border: none;
+		background: none;
+		margin: 0;
+	}
+	.icon_btn > img {
+		height: 40px;
+	}
+
+
+	#edit {
+		display: none;
+	}
+	#edit * {
+		display: block;
+	}
+	#set_name {
+		width: 70%;
+		margin: 0 15%;
+	}
+	#hashtags {
+		max-width: 80%;
+		min-width: 80%;
+		min-height: 100px;
+		margin: 25px 10%;
+	}
+	#save_btn {
+		position: absolute;
+		left: 5%;
+		bottom: 20px;
+
+		margin: 3px;
+	}
+	#save_btn > img {
+		height: 35px;
+	}
+	.favorite_btn {
+		position: absolute;
+		right: 5%;
+		top: 20px;
+		margin: 3px;
+
+		display: initial !important;
+		width: initial !important;
+	}
+	.favorite_btn:hover {
+		scale: 1.05;
+		filter: brightness(90%);
+	}
+	.favorite_btn:active {
+		scale: 0.9;
+	}
+	.favorite_btn img {
+		height: 35px;
+	}
+	.favourited {
+		border: 3px yellow solid !important;
+	}
+	.favorite_btn > label {
+		height: 35px;
+		background-size: 35px 35px;
+		background-image: url("icons/icons8-add-to-favorites-50.png") !important;
+	}
+	#favorite_toggle {
+		display: none;
+	}
+	:checked + label {
+		background-image: url("icons/icons8-add-to-favorites-50_full.png") !important;
+	}
+
+	#settings {
+		display: none;
+	}
+	.option {
+		display: grid;
+		width: 80%;
+		margin: 5px 10%;
+		grid-template-columns: 70% 30%;
+		align-items: start;
+	}
+	.option > label {
+		font-size: 1.2em;
+	}
+	.toggle {
+		position: relative;
+		display: inline-block;
+		width: 40px;
+		height: 20px;
+	}
+	.toggle input {
+		opacity: 0;
+		width: 0;
+		height: 0;
+	}
+	.slider {
+		position: absolute;
+		cursor: pointer;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #ccc;
+		border-radius: 20px;
+		transition: .3s;
+	}
+	.slider:before {
+		position: absolute;
+		content: "";
+		height: 18px;
+		width: 18px;
+		left: 1px;
+		bottom: 1px;
+		background-color: white;
+		transition: .3s;
+		border-radius: 100%;
+	}
+	input:checked + .slider {
+		background-color: var(--main-blue);
+	}
+	input:checked + .slider:before {
+		transform: translateX(20px);
+	}
+
+	#keybinds {
+		display: none;
+	}
+	.keybind {
+		grid-template-columns: 30% 70%;
+	}
+
+	#alert {
+		display: block;
+		visibility: hidden;
+		opacity: 0;
+		position: fixed;
+		bottom: 0;
+		width: 50%;
+		margin: 20px 20%;
+
+		border-radius: 25px;
+		background-color: lightgrey;
+		font-size: 2em;
+		padding: 5px;
+
+		transition: visibility 0.25s, opacity 0.25s;
+	}
+	#alert:active {
+		filter: brightness(80%);
+	}
+	#alert:hover {
+		scale: 1.1;
+	}
+	#alert > span {
+		line-height: 100%;
+		text-align: center;
+	}
+	#alert_close {
+		float: right;
+		margin: 0 5px;
+	}
+	#alert_close:hover {
+		cursor: pointer;
+	}
+</style>
+
+<script src="script.js"></script>
+
+<div id="main" class="popup">
+	<div id="main_floating_header">
+		<h1>__MSG_main_h1__</h1>
+		<input type="text" id="search_bar" placeholder="__MSG_search_placeholder__" tabindex="1">
+
+		<button id="new_btn" class="icon_btn" title="__MSG_new_btn_title__">
+			<img src="icons/icons8-add-64.png" alt="new">
+		</button>
+		<button id="settings_btn" class="icon_btn" title="__MSG_settings_btn_title__">
+			<img src="icons/icons8-engineering-50.png" alt="settings">
+		</button>
+	</div>
+	
+	<ul id="set_list">
+
+	</ul>
+
+	
+</div>
+<div id="edit" class="popup">
+	<h1>__MSG_edit_h1__</h1>
+	<input id="set_name" type="text" placeholder="__MSG_set_name_placeholder__">
+	<textarea id="hashtags" placeholder="__MSG_hashtags_placeholder__"></textarea>
+
+	<button id="save_btn" class="icon_btn" title="__MSG_save_btn_title__">
+		<img src="icons/icons8-save-60.png" alt="save">
+	</button>
+	<button id="close_edit_btn" class="close_btn" title="__MSG_close_edit_btn_title__">
+		<img src="icons/icons8-chevron-left-48.png" alt="back">
+	</button>
+
+	<div class="favorite_btn" title="__MSG_favorite_btn_title__">
+		<input type="checkbox" id="favorite_toggle">
+		<label for="favorite_toggle">
+			<img src="icons/icons8-add-to-favorites-50.png" alt="favorite">
+		</label>
+	</div>
+</div>
+<div id="settings" class="popup">
+	<h1>__MSG_settings_h1__</h1>
+	<div class="option">
+		<label>__MSG_typ_sup_label__</label>
+		<label class="toggle" id="typ_sup_toggle" title="__MSG_typ_sup_toggle_title__">
+			<input type="checkbox">
+			<span class="slider"></span>
+		</label>
+	</div>
+	
+	<div class="option">
+		<label>__MSG_save_close_label__</label>
+		<label class="toggle" id="save_close_toggle" title="__MSG_save_close_toggle_title__">
+			<input type="checkbox">
+			<span class="slider"></span>
+		</label>
+	</div>
+
+	<button id="clear_btn" title="__MSG_clear_btn_title__" disabled>__MSG_clear_btn_inner__</button>
+	<button id="export_btn" title="__MSG_export_btn_title__">__MSG_export_btn_inner__</button>
+	<button id="reset_settings_btn" title="__MSG_reset_settings_btn_title__">__MSG_reset_settings_btn_inner__</button>
+	<button id="delete_sets_btn" title="__MSG_delete_sets_btn_title__">__MSG_delete_sets_btn_inner__</button>
+	<button id="keybinds_btn" title="__MSG_keybinds_btn_title__">__MSG_keybinds_btn_inner__</button>
+
+	<button id="close_settings_btn" class="close_btn" title="__MSG_close_settings_btn_title__">
+		<img src="icons/icons8-chevron-left-48.png" alt="back">
+	</button>
+</div>
+<div id="keybinds" class="popup">
+	<h1>__MSG_keybinds_h1__</h1>
+	
+	<div class="option keybind" title="__MSG_save_keybind_title__">
+		<label>__MSG_save_keybind_label__</label>
+		<input type="text" id="save_keybind">
+	</div>
+
+	<div class="option keybind" title="__MSG_back_keybind_title__">
+		<label>__MSG_back_keybind_label__</label>
+		<input type="text" id="back_keybind">
+	</div>
+
+	<div class="option keybind" title="__MSG_new_keybind_title__">
+		<label>__MSG_new_keybind_label__</label>
+		<input type="text" id="new_keybind">
+	</div>
+
+	<div class="option keybind" title="__MSG_edit_keybind_title__">
+		<label>__MSG_edit_keybind_label__</label>
+		<input type="text" id="edit_keybind">
+	</div>
+
+	<div class="option keybind" title="__MSG_delete_keybind_title__">
+		<label>__MSG_delete_keybind_label__</label>
+		<input type="text" id="delete_keybind">
+	</div>
+
+	<div class="option keybind" title="__MSG_favorite_keybind_title__">
+		<label>__MSG_favorite_keybind_label__</label>
+		<input type="text" id="favorite_keybind">
+	</div>
+
+	<button id="close_keybinds_btn" class="close_btn" title="__MSG_close_settings_btn_title__">
+		<img src="icons/icons8-chevron-left-48.png" alt="back">
+	</button>
+</div>

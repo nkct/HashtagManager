@@ -1,0 +1,160 @@
+{
+  "main_h1": {
+    "message": "Your sets:"
+  },
+  "search_placeholder": {
+    "message": "Search..."
+  },
+  "new_btn_title": {
+    "message": "Make a new set."
+  },
+  "settings_btn_title": {
+    "message": "Open settings."
+  },
+
+  "edit_h1": {
+    "message": "Edit Set:"
+  },
+  "set_name_placeholder": {
+    "message": "Name of your set"
+  },
+  "hashtags_placeholder": {
+    "message": "Your hashtags"
+  },
+  "save_btn_title": {
+    "message": "Save the changes you've made."
+  },
+  "close_edit_btn_title": {
+    "message": "Exit editing without saving any changes."
+  },
+  "favorite_btn_title": {
+    "message": "Favorite this set so that it appears at the top of your list."
+  },
+
+  "settings_h1": {
+    "message": "Settings:"
+  },
+  "typ_sup_label": {
+    "message": "typing support"
+  },
+  "typ_sup_toggle_title": {
+    "message": "Enable or disable automatic comma and hashtag placing when editing sets."
+  },
+  "save_close_label": {
+    "message": "save closes edit menu"
+  },
+  "save_close_toggle_title": {
+    "message": "Enable or disable closing the edit menu when you save."
+  },
+  "clear_btn_title": {
+    "message": "DEBUG, wipes local storage clean"
+  },
+  "clear_btn_inner": {
+    "message": "clear data"
+  },
+  "export_btn_title": {
+    "message": "Save all your sets into a json file."
+  },
+  "export_btn_inner": {
+    "message": "export"
+  },
+  "reset_settings_btn_title": {
+    "message": "Reset your settings and keybinds to default values."
+  },
+  "reset_settings_btn_inner": {
+    "message": "reset settings"
+  },
+  "delete_sets_btn_title": {
+    "message": "Delete all your sets."
+  },
+  "delete_sets_btn_inner": {
+    "message": "delete all sets"
+  },
+  "keybinds_btn_title": {
+    "message": "Edit key combination which activate shortcuts."
+  },
+  "keybinds_btn_inner": {
+    "message": "edit keybinds"
+  },
+  "close_settings_btn_title": {
+    "message": "Exit, your changes have been saved automatically."
+  },
+
+  "keybinds_h1": {
+    "message": "Keybinds:"
+  },
+  "save_keybind_title": {
+    "message": "Choose which keys save when editing. (Default: Enter)"
+  },
+  "save_keybind_label": {
+    "message": "save:"
+  },
+  "back_keybind_title": {
+    "message": "Choose which keys go back to the previous menu. (Default: Escape)"
+  },
+  "back_keybind_label": {
+    "message": "back:"
+  },
+  "new_keybind_title": {
+    "message": "Choose which keys create a new set. (Default: Control+n)"
+  },
+  "new_keybind_label": {
+    "message": "new:"
+  },
+  "edit_keybind_title": {
+    "message": "Choose which keys edit the selected set. (Default: Control+e)"
+  },
+  "edit_keybind_label": {
+    "message": "edit:"
+  },
+  "delete_keybind_title": {
+    "message": "Choose which keys delete the selected set. (Default: Control+d)"
+  },
+  "delete_keybind_label": {
+    "message": "delete:"
+  },
+  "favorite_keybind_title": {
+    "message": "Choose which keys favorite the set you are editing. (Default: Control+f)"
+  },
+  "favorite_keybind_label": {
+    "message": "favorite:"
+  },
+
+  "no_sets_message": {
+    "message": "You dont have any sets saved"
+  },
+  "set_edit_title": {
+    "message": "Edit $set_name$.",
+    "placeholders": {
+      "set_name": {
+        "content": "$1"
+      }
+    }
+  },
+  "set_delete_title": {
+    "message": "Delete $set_name$.",
+    "placeholders": {
+      "set_name": {
+        "content": "$1"
+      }
+    }
+  },
+  "copy_alert": {
+    "message": "Copied!"
+  },
+  "save_alert": {
+    "message": "Saved!"
+  }
+  ,"delete_alert": {
+    "message": "Deleted!"
+  },
+  "delete_confirm": {
+    "message": "Delete this set?"
+  },
+  "confirm": {
+    "message": "Yes"
+  },
+  "decline": {
+    "message": "No"
+  }
+}
