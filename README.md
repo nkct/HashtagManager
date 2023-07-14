@@ -1,5 +1,6 @@
 # HashtagManager
-HashtagManager is browser extension for organizing hashtags to ease proffesional social media management on platforms like Instagram or Facebook.  
+HashtagManager is a browser extension for organizing hashtags to ease proffesional social media management on platforms like Instagram or Facebook.  
+
 ![Main Screen](HM_screenshot_main_screen.png "Main Screen of the HashtagManager")
 
 This project was started on a template from the great [extensionizr.com](https://extensionizr.com).  
