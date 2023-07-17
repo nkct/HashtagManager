@@ -5,7 +5,7 @@ HashtagManager is a browser extension for organizing hashtags to ease proffesion
 
 This project was started on a template from the great [extensionizr.com](https://extensionizr.com).  
 It has translations for both Polish and English.  
-Tested on both Chrome and Firefox, and should run with no problems on browsers using the same engines.
+Tested on both Chrome and Firefox, and should run with no problems on browsers using the same engines.  
 Safari and MacOS support is strongly desired but progress has been stalled as I do not posses an Apple device. Any help with this would be greatly appreciated.
 
 ## Usage:
@@ -16,3 +16,6 @@ You might need [firefox for developers](https://www.mozilla.org/en-US/firefox/de
 
 ## Contributions:
 All contributions, issues, and messages are welcome! If you aren't sure about something or have any questions please reach out to me.
+
+Copyright © 2023 Miłosz Żegota
+All Rights Reserved. If you wish to use, distribute, or modify this program, contact the authors.
